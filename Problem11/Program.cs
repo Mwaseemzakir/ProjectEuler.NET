@@ -94,23 +94,42 @@ internal class Program
         double maxProduct = 0;
 
         //Top left to bottom
-        for(int i = 0, j = 0; i <= rows - 4 && j <= cols - 4; i++, j++)
-        {
-            double product = grid[i][j] * grid[i + 1][j + 1] * grid[i + 2][j + 2] * grid[i + 3][j + 3];
-
-            maxProduct = Math.Max(maxProduct, product);
-        }
+        maxProduct = FindMaxFromTopLeftToBottom(grid, rows, cols, maxProduct);
 
         //Right left to bottom
+        maxProduct = FindMaxFromTopRightToBottom(grid, rows, maxProduct);
+
+        return maxProduct;
+
+    }
+
+    private static double FindMaxFromTopRightToBottom(int[][] grid, int rows, double maxProduct)
+    {
         for(int i = 0, j = rows - 1; i <= rows && j >= 3; i++, j--)
         {
+            //Central diagonal
             int product = grid[i][j] * grid[i + 1][j - 1] * grid[i + 2][j - 2] * grid[i + 3][j - 3];
 
             maxProduct = Math.Max(maxProduct, product);
         }
 
         return maxProduct;
+    }
 
+    private static double FindMaxFromTopLeftToBottom(int[][] grid, int rows, int cols, double maxProduct)
+    {
+        for(int i = 0; i <= rows - 4; i++)
+        {
+            for(int j = 0; j <= cols - 4; j++)
+            {
+                //Central diagonal
+                double product = grid[i][j] * grid[i + 1][j + 1] * grid[i + 2][j + 2] * grid[i + 3][j + 3];
+
+                maxProduct = Math.Max(maxProduct, product);
+            }
+        }
+
+        return maxProduct;
     }
 
     private static int[][] GetJaggedArray(string input)
