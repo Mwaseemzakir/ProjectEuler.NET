@@ -132,10 +132,6 @@ internal class Program
     {
         BigInteger sum = 0;
 
-        int totalLines = input
-            .Split(Environment.NewLine)
-            .Length;
-
         List<string>? sampleList = input
             .Split(Environment.NewLine)
             .ToList();
