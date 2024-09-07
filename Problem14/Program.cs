@@ -16,9 +16,6 @@ internal class Program
 
         int limit = 100_000_0; //10Lakh = 1M
 
-        //Console.WriteLine(GetChainCount(13));
-
-
         for(int i = 2; i < limit; i++)
         {
             maxChain = Math.Max(maxChain, GetChainCount(i));
