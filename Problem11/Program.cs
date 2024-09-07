@@ -26,6 +26,7 @@ internal class Program
         20 73 35 29 78 31 90 01 74 31 49 71 48 86 81 16 23 57 05 54
         01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48
         """;
+    
     private static string sample = """
         89 90 95 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08  
         49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00  
@@ -48,8 +49,10 @@ internal class Program
         20 73 35 29 78 31 90 01 74 31 49 71 48 86 81 16 23 57 05 54  
         01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48
         """;
+    
     //For sample result should be : 73812150
     private static readonly int[][] grid = GetJaggedArray(input);
+    
     static void Main(string[] args)
     {
         Stopwatch? watch = new Stopwatch();
@@ -114,22 +117,25 @@ internal class Program
     {
         double maxProduct = 0;
 
-        //Top left to bottom
-        for(int i = 0, j = rows - 1; i <= rows && j >= 3; i++, j--)
-        {
-            //Central diagonal
-            int product = grid[i][j] * grid[i + 1][j - 1] * grid[i + 2][j - 2] * grid[i + 3][j - 3];
-
-            maxProduct = Math.Max(maxProduct, product);
-        }
-
-        //Right left to bottom
+        //To left to bottom
         for(int i = 0; i <= rows - 4; i++)
         {
             for(int j = 0; j <= cols - 4; j++)
             {
                 //Central diagonal
                 double product = grid[i][j] * grid[i + 1][j + 1] * grid[i + 2][j + 2] * grid[i + 3][j + 3];
+
+                maxProduct = Math.Max(maxProduct, product);
+            }
+        }
+
+        //Top right to bottom
+        for(int i = 0; i <= rows - 4; i++)
+        {
+            for(int j = cols - 1; j >= 3; j--)
+            {
+                //Central diagonal
+                int product = grid[i][j] * grid[i + 1][j - 1] * grid[i + 2][j - 2] * grid[i + 3][j - 3];
 
                 maxProduct = Math.Max(maxProduct, product);
             }
