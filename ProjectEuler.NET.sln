@@ -3,24 +3,24 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35004.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem11", "Problem11\Problem11.csproj", "{5DD4DC20-AC06-4ECC-9482-4E3796483F51}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem11", "Problem11\Problem11.csproj", "{5DD4DC20-AC06-4ECC-9482-4E3796483F51}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem13", "Problem13\Problem13.csproj", "{3AB7DAE4-118E-432C-BA17-F4B819BF5AD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem13", "Problem13\Problem13.csproj", "{3AB7DAE4-118E-432C-BA17-F4B819BF5AD6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notes", "Notes", "{51096EA9-EFA1-4187-8ADC-FA835625CD35}"
 	ProjectSection(SolutionItems) = preProject
 		readme.md = readme.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem14", "Problem14\Problem14.csproj", "{174C56E6-80C2-4DFA-84B7-B6E700CF14C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem14", "Problem14\Problem14.csproj", "{174C56E6-80C2-4DFA-84B7-B6E700CF14C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem15", "Problem15\Problem15.csproj", "{0317A467-D14F-47BB-B222-19EE8F0AC163}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem15", "Problem15\Problem15.csproj", "{0317A467-D14F-47BB-B222-19EE8F0AC163}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Level1", "Level1", "{69DDDA42-15BC-4D77-B239-8E955BBA2E21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem18", "Problem18\Problem18.csproj", "{DE1C8466-CE5E-4061-A835-2616C00C43F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem18", "Problem18\Problem18.csproj", "{DE1C8466-CE5E-4061-A835-2616C00C43F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Sharedd\Shared.csproj", "{F95F2244-6420-4FC4-8A45-1CE7FB45B83D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "Shared\Shared.csproj", "{E7A02DA6-41BD-47F1-9799-F47A3DA8929E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -48,10 +48,10 @@ Global
 		{DE1C8466-CE5E-4061-A835-2616C00C43F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE1C8466-CE5E-4061-A835-2616C00C43F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE1C8466-CE5E-4061-A835-2616C00C43F2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F95F2244-6420-4FC4-8A45-1CE7FB45B83D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F95F2244-6420-4FC4-8A45-1CE7FB45B83D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F95F2244-6420-4FC4-8A45-1CE7FB45B83D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F95F2244-6420-4FC4-8A45-1CE7FB45B83D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7A02DA6-41BD-47F1-9799-F47A3DA8929E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7A02DA6-41BD-47F1-9799-F47A3DA8929E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7A02DA6-41BD-47F1-9799-F47A3DA8929E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7A02DA6-41BD-47F1-9799-F47A3DA8929E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

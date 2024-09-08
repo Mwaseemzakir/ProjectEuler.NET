@@ -1,5 +1,5 @@
 ﻿using Shared;
-using System.Numerics;
+using System.Diagnostics;
 
 namespace Problem18;
 
@@ -31,22 +31,70 @@ internal class Program
         """;
     static void Main(string[] args)
     {
-        int[][] result = ArraysOperator.GetJaggedArray(sample);
+        Stopwatch? watch = new Stopwatch();
 
-         GetSum(result);
+        //int[][] result = ArraysOperator.GetJaggedArray(sample);
+
+        int[][] result = ArraysOperator.GetJaggedArray(actual);
+
+        watch.Start();
+
+        Console.WriteLine($"Result : {GetSum(result)}");
+
+        watch.Stop();
+
+        Console.WriteLine($"Execution Time: {watch.ElapsedMilliseconds} ms");
     }
 
-    public static BigInteger GetSum(int[][] result)
+    public static int GetSum(int[][] result)
     {
-        BigInteger sum = 0;
+        int sum = 0;
 
         int rows = result.Length;
-
-        for(int i = 0; i < rows; i++)
+        
+        for (int i = 0; i < rows; i++)
         {
-            
+            int cols = result[i].Length;
+
+            for(int j = 0; j < cols; j++)
+            {
+                sum = Math.Max(sum,GetSumOfAdjacent(result, rows, i, j));
+            }
         }
 
-        return 0;
+        return sum;
+    }
+
+    private static int GetSumOfAdjacent(
+        int[][] result,
+        int totalRows,
+        int startingRow,
+        int startingCol)
+    {
+        int sum = 0;
+
+        int i = startingRow, j = startingCol;
+
+        while(i < totalRows )
+        {
+            int cols = result[i].Length;
+
+            if(j < cols)
+            {
+                int number = result[i][j];
+
+                sum += number;
+            }
+
+            i++;
+
+            //If j is at last row then no need to check it, just return the entry
+            if(cols > 1)
+            {
+                j++;
+            }
+        }
+
+        return sum;
     }
 }
